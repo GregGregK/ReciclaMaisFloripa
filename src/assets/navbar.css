@@ -1,0 +1,54 @@
+/* Define a navbar para ocupar todo o topo da página */
+.nav {
+  background-color: #5F6F52;
+  padding: 20px; /* Aumenta o padding para aumentar o tamanho da navbar */
+  display: flex;
+  justify-content: space-between; /* Alinha itens nas extremidades esquerda e direita */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+  position: fixed; /* Fixa a navbar no topo da página */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+  height: 70px; /* Define a altura da navbar */
+}
+
+/* Remove margens e padding padrão */
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.li {
+  display: inline;
+}
+
+/* Estiliza os links */
+.a {
+  color: #FEFAE0;
+  text-decoration: underline; /* Adiciona sublinha */
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+  font-size: 18px; /* Aumenta o tamanho da fonte dos links */
+}
+
+.a:hover {
+  color: #D4D4D4; /* Cor ao passar o mouse */
+}
+
+/* Estiliza o ícone */
+.icon {
+  color: #FEFAE0;
+  margin-right: 16px;
+  font-size: 24px;
+}
+
+/* Adiciona um espaço no topo do conteúdo para que ele não fique atrás da navbar */
+body {
+  padding-top: 70px; /* Ajuste conforme a altura da navbar */
+}

@@ -1,0 +1,11 @@
+/* src/assets/footer.css */
+.footer {
+  background-color: #5F6F52;
+  color: #FEFAE0;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative; /* Altere para relative para não ficar fixo */
+  bottom: 0;
+  left: 0; /* Adicione isso para garantir que o footer encoste no lado esquerdo */
+}
