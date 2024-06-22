@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './views/landing-page/home';
-import SearchResults from './views/pesquisa/pesquisa';
+import SearchResults from './views/pesquisa/SearchResults';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
@@ -12,6 +12,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

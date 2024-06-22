@@ -31,10 +31,9 @@
 /* Estiliza os links */
 .a {
   color: #FEFAE0;
-  text-decoration: underline; /* Adiciona sublinha */
   padding: 8px 16px;
   transition: color 0.3s ease;
-  font-size: 18px; /* Aumenta o tamanho da fonte dos links */
+  font-size: 15px; /* Aumenta o tamanho da fonte dos links */
 }
 
 .a:hover {
@@ -45,7 +44,7 @@
 .icon {
   color: #FEFAE0;
   margin-right: 16px;
-  font-size: 24px;
+  font-size: 15px;
 }
 
 /* Adiciona um espaço no topo do conteúdo para que ele não fique atrás da navbar */

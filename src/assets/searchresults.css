@@ -1,152 +1,160 @@
 /* src/assets/searchresults.css */
 
 .search-results-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .search-results-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .results-list-container {
-    display: flex;
-    justify-content: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.search-results-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.results-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.results-list {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1em; /* Ajuste do tamanho da fonte */
+}
+
+.back-button,
+.filter-button {
+  background-color: #5F6F52;
+  color: #FEFAE0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.results-text {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.filter-button:hover + .filter-menu,
+.filter-menu:hover {
+  display: block;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.filter-item:hover,
+.filter-item.selected {
+  background-color: #5F6F52;
+  color: #FEFAE0;
+}
+
+.filter-item input {
+  margin-right: 10px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item.reciclável .item-type {
+  color: lightgreen;
+}
+
+.result-item.eletrônico .item-type {
+  color: blue;
+}
+
+.result-item.isopor .item-type {
+  color: orange;
+}
+
+.result-item.vidro .item-type {
+  color: green;
+}
+
+.result-item.pesados .item-type {
+  color: red;
+}
+
+.location-button {
+  background-color: #5F6F52;
+  color: #FEFAE0;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.map {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
   .results-list {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 800px;
-  }
-  
-  .results-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    font-size: 10px;
   }
-  
-  .back-button,
-  .filter-button {
-    background-color: #5F6F52;
-    color: #FEFAE0;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   .results-text {
-    font-size: 1.2em;
-    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  .filter-dropdown {
-    position: relative;
-  }
-  
+
   .filter-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 10;
-  }
-  
-  .filter-button:hover + .filter-menu,
-  .filter-menu:hover {
-    display: block;
-  }
-  
-  .filter-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
     width: 100%;
-    text-align: left;
   }
-  
-  .filter-item:hover,
-  .filter-item.selected {
-    background-color: #5F6F52;
-    color: #FEFAE0;
-  }
-  
-  .filter-item input {
-    margin-right: 10px;
-  }
-  
-  .result-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .result-item:last-child {
-    border-bottom: none;
-  }
-  
-  .result-item.reciclável .item-type {
-    color: lightgreen;
-  }
-  
-  .result-item.eletrônico .item-type {
-    color: blue;
-  }
-  
-  .result-item.isopor .item-type {
-    color: orange;
-  }
-  
-  .result-item.vidro .item-type {
-    color: black;
-  }
-  
-  .result-item.pesados .item-type {
-    color: red;
-  }
-  
-  .location-button {
-    color: black;
-    padding: 5px 10px;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .map {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .map img {
-    max-width: 100%;
-  }
-  
-  .footer {
-    background-color: #5F6F52;
-    color: #FEFAE0;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: static;
-    bottom: 0;
-  }
+}
