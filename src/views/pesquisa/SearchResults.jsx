@@ -57,7 +57,7 @@ const SearchResults = () => {
     const service = new window.google.maps.places.PlacesService(document.createElement('div'));
     const request = {
       location: location,
-      radius: '1000', // Raio em metros
+      radius: '2000', // Raio em metros
       keyword: 'Centro de Reciclagem',
     };
 
@@ -68,7 +68,8 @@ const SearchResults = () => {
           lng: place.geometry.location.lng(),
           name: place.name,
           address: place.vicinity,
-          type: 'Centro de Reciclagem', // Adicione um tipo padrão
+          type: 'Centro de Reciclagem',
+          photo: place.photos ? place.photos[0].getUrl({ maxWidth: 200, maxHeight: 200 }) : null, // Adicione a foto
         })));
       } else {
         console.error('Places search was not successful for the following reason: ' + status);
@@ -120,6 +121,20 @@ const SearchResults = () => {
     setActiveMarker(marker);
   };
 
+  const handleLocationButtonClick = (index, lat, lng) => {
+    setCoordinates({ lat, lng });
+    setActiveMarker(index);
+    if (map) {
+      map.panTo({ lat, lng });
+      map.setZoom(15); // Defina o nível de zoom desejado ao clicar no botão de localização
+    }
+  };
+
+  const openGoogleMaps = (lat, lng) => {
+    const url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+    window.open(url, '_blank');
+  };
+
   if (loadError) {
     return <div>Error loading maps</div>;
   }
@@ -155,9 +170,9 @@ const SearchResults = () => {
             </div>
             {filteredResults.map((result, index) => (
               <div key={index} className={`result-item ${result.type.toLowerCase()}`}>
-                <span>{result.name} - {result.address}</span>
+                <span className="result-details">{result.name} - {result.address}</span>
                 <span className="item-type">{result.type}</span>
-                <button className="location-button">Ver localização</button>
+                <button className="location-button" onClick={() => handleLocationButtonClick(index, result.lat, result.lng)}>Ver localização</button>
               </div>
             ))}
           </div>
@@ -167,7 +182,7 @@ const SearchResults = () => {
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={coordinates}
-              zoom={12}
+              zoom={12}  // Diminua o valor do zoom aqui para 12 ou outro valor que prefira
               onLoad={onLoad}
               onUnmount={onUnmount}
               onClick={() => setActiveMarker(null)}
@@ -177,6 +192,7 @@ const SearchResults = () => {
                 <Marker
                   key={index}
                   position={{ lat: center.lat, lng: center.lng }}
+                  onClick={() => openGoogleMaps(center.lat, center.lng)} // Redirecionar para o Google Maps ao clicar no red dot
                   onMouseOver={() => handleActiveMarker(index)}
                 >
                   {activeMarker === index ? (
@@ -184,6 +200,7 @@ const SearchResults = () => {
                       <div>
                         <h3>{center.name}</h3>
                         <p>{center.address}</p>
+                        {center.photo && <img src={center.photo} alt={center.name} />}
                       </div>
                     </InfoWindow>
                   ) : null}

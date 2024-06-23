@@ -1,0 +1,90 @@
+.alerta-coletas-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.alerta-coletas-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex: 1;
+}
+
+.info-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.info-container .back-button {
+  background-color: #5F6F52;
+  color: #FEFAE0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+
+.info-container .info-text {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.info-container .info-item {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.info-container .info-item h3 {
+  margin-bottom: 10px;
+}
+
+.info-container .remind-button {
+  background-color: #5F6F52;
+  color: #FEFAE0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.map-container {
+  width: 80%;
+}
+
+.map-container iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.map-toggle-buttons button{
+  background-color: #5F6F52;
+  color: #FEFAE0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+
+}
+
+.map-toggle-buttons{
+  display: flex;
+  gap: 2px;
+  flex-direction: row ;
+}

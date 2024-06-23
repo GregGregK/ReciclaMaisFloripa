@@ -9,7 +9,7 @@ const Navbar = () => {
         <a href="/"><UilHome size="20" color="#FEFAE0" /></a>
       </div>
       <ul className="ul">
-        <li className="li"><a className="a" href="/">Alertas</a></li>
+        <li className="li"><a className="a" href="/alerta-coletas">Alertas</a></li>
         <li className="li"><a className="a" href="/about">Parceiros</a></li>
         <li className="li"><a className="a" href="/contact">Sobre nós</a></li>
         <li className="li"><a className="a" href="/contact">Como ajudar?</a></li>

@@ -43,11 +43,15 @@
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 1em;
 }
 
 .results-text {
   font-size: 1.2em;
-  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex: 1;
+  text-align: center;
 }
 
 .filter-dropdown {
@@ -105,6 +109,16 @@
   border-bottom: none;
 }
 
+.result-details {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+}
+
+.item-type{
+  padding: 15px;
+}
+
 .result-item.reciclável .item-type {
   color: lightgreen;
 }
@@ -132,6 +146,7 @@
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 1em;
 }
 
 .map {
@@ -152,6 +167,8 @@
   .results-text {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-weight: light;
+    font-size: 10px;
   }
 
   .filter-menu {
