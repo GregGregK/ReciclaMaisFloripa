@@ -47,6 +47,7 @@ const AdSections = () => {
               onKeyPress={handleKeyPress}
             />
           </Autocomplete>
+          
         </LoadScript>
         <img src={image1} alt="Imagem relacionada ao anúncio 1" />
       </div>

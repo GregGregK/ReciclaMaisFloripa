@@ -5,7 +5,7 @@
   text-align: center;
   padding: 20px 0;
   width: 100%;
-  position: relative; /* Altere para relative para não ficar fixo */
+  position:static; /* Altere para relative para não ficar fixo */
   bottom: 0;
   left: 0; /* Adicione isso para garantir que o footer encoste no lado esquerdo */
 }

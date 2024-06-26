@@ -11,8 +11,7 @@ const Navbar = () => {
       <ul className="ul">
         <li className="li"><a className="a" href="/alerta-coletas">Alertas</a></li>
         <li className="li"><a className="a" href="/about">Parceiros</a></li>
-        <li className="li"><a className="a" href="/contact">Sobre nós</a></li>
-        <li className="li"><a className="a" href="/contact">Como ajudar?</a></li>
+        <li className="li"><a className="a" href="/cadastro-alerta">Cadastro</a></li>
       </ul>
     </nav>
   );

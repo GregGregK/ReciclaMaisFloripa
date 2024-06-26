@@ -1,0 +1,37 @@
+.cadastro-alerta-page {
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #6d7d46;
+    padding: 10px 0;
+  }
+  
+  .header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .header nav ul li {
+    display: inline;
+  }
+  
+  .header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .banner {
+    background-image: url('/path/to/your/background/image.png');
+    background-size: cover;
+    padding: 50px 0;
+  }
+  
+  .cadastro-alerta-form {
+    margin-top: 50px;
+  }
+  
