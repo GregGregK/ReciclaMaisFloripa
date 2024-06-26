@@ -1,37 +1,38 @@
 .cadastro-alerta-page {
-    text-align: center;
-  }
-  
-  .header {
-    background-color: #6d7d46;
-    padding: 10px 0;
-  }
-  
-  .header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .header nav ul li {
-    display: inline;
-  }
-  
-  .header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .banner {
-    background-image: url('/path/to/your/background/image.png');
-    background-size: cover;
-    padding: 50px 0;
-  }
-  
-  .cadastro-alerta-form {
-    margin-top: 50px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #A9B388;
+}
+
+.background-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha o conteúdo no topo */
+  height: 400px;
+  width: 100%;
+  background-image: url('../assets/img/floripa-img.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cadastro-alerta-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin-top: 20px; /* Ajuste a margem conforme necessário */
+}

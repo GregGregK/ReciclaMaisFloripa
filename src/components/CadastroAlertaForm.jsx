@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../assets/body.css';
 import '../assets/CadastroAlertaForm.css'; // Import the CSS file for styling
 
 const CadastroAlertaForm = () => {
@@ -21,7 +22,6 @@ const CadastroAlertaForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log(formValues);
   };
 
@@ -38,7 +38,7 @@ const CadastroAlertaForm = () => {
         <input
           type="text"
           name="lastName"
-          placeholder="Primeiro nome"
+          placeholder="Segundo nome"
           value={formValues.lastName}
           onChange={handleInputChange}
         />
@@ -72,7 +72,7 @@ const CadastroAlertaForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <div className="form-group">
+      <div className="form-group-options">
         <p>Eu gostaria de receber uma notificação através de:</p>
         <label>
           <input

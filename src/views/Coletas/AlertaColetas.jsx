@@ -8,8 +8,9 @@ import '../../assets/alerta-coletas.css'; // Estilização da página
 const AlertaColetas = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const bairro = searchParams.get('bairro');
+  const initialBairro = searchParams.get('bairro') || '';
 
+  const [bairro, setBairro] = useState(initialBairro);
   const [coordenadas, setCoordenadas] = useState({ lat: 0, lng: 0 });
   const [nomeRota, setNomeRota] = useState('Nome: Não encontrado');
   const [descricaoRota, setDescricaoRota] = useState('Descrição: Não encontrada');
@@ -34,7 +35,9 @@ const AlertaColetas = () => {
       }
     };
 
-    obterCoordenadas(bairro);
+    if (bairro) {
+      obterCoordenadas(bairro);
+    }
   }, [bairro]);
 
   useEffect(() => {
@@ -56,9 +59,10 @@ const AlertaColetas = () => {
     };
   }, []);
 
-  const handleBackClick = () => {
-    // Implemente a lógica desejada para voltar à página anterior
-    console.log('Voltar clicado');
+  const handleSearch = () => {
+    // Atualiza o estado do bairro para o novo valor
+    const newBairro = document.getElementById('bairro-input').value;
+    setBairro(newBairro);
   };
 
   const handleMapToggle = (mapType) => {
@@ -70,7 +74,15 @@ const AlertaColetas = () => {
       <Navbar />
       <div className="alerta-coletas-content">
         <div className="info-container">
-          <button className="back-button" onClick={handleBackClick}>Voltar</button>
+          <div className="search-container">
+            <input
+              type="text"
+              id="bairro-input"
+              className="search-input"
+              placeholder="Digite o endereço para encontrar Ecopontos..."
+            />
+            <button className="search-button" onClick={handleSearch}>Pesquisar</button>
+          </div>
           <span className="info-text">Exibindo resultados para: {bairro}</span>
           <div className="info-item">
             <h3>{nomeRota}</h3>

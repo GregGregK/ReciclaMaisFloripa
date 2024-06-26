@@ -1,53 +1,72 @@
 .cadastro-alerta-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: auto;
-  }
-  
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group-options p {
+  margin-bottom: 10px;
+}
+
+.form-group-options label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #b5bf95;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #a5af85;
+}
+
+@media (min-width: 768px) {
   .form-group {
-    margin-bottom: 15px;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
+
   .form-group input[type="text"],
   .form-group input[type="email"] {
     width: calc(50% - 10px);
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
-  
-  .form-group input[type="email"] {
-    width: 100%;
-  }
-  
-  .form-group input[type="checkbox"],
-  .form-group input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .form-group p {
-    margin-bottom: 10px;
-  }
-  
-  .submit-button {
-    background-color: #b5bf95;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #a5af85;
-  }
-  
+}

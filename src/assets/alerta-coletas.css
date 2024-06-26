@@ -1,90 +1,93 @@
-.alerta-coletas-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.alerta-coletas-content {
+/* Escopo específico para a página de Alerta Coletas */
+.alerta-coletas-page .alerta-coletas-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  flex: 1;
+  width: 100%; /* Preencher toda a largura */
+  padding: 20px; /* Adicionar espaçamento interno */
+  box-sizing: border-box; /* Incluir padding e borda na largura total */
 }
 
-.info-container {
-  background: white;
+.alerta-coletas-page .info-container {
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.info-container .back-button {
-  background-color: #5F6F52;
-  color: #FEFAE0;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-
-.info-container .info-text {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.info-container .info-item {
-  margin-bottom: 20px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 800px;
-}
-
-.info-container .info-item h3 {
-  margin-bottom: 10px;
-}
-
-.info-container .remind-button {
-  background-color: #5F6F52;
-  color: #FEFAE0;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-.map-container {
-  width: 80%;
-}
-
-.map-container iframe {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-}
-
-.map-toggle-buttons button{
-  background-color: #5F6F52;
-  color: #FEFAE0;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1em;
-
-}
-
-.map-toggle-buttons{
+  max-width: 800px; /* Definir largura máxima */
+  width: 100%; /* Preencher toda a largura */
+  margin-top: 20px;
   display: flex;
-  gap: 2px;
-  flex-direction: row ;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.alerta-coletas-page .search-container {
+  display: flex;
+  gap: 10px;
+  width: 100%; /* Preencher toda a largura */
+}
+
+.alerta-coletas-page .search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Preencher toda a largura disponível */
+  box-sizing: border-box; /* Incluir padding e borda na largura total */
+}
+
+.alerta-coletas-page .search-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #A9B388;
+  color: white;
+  cursor: pointer;
+  width: auto; /* Ajustar largura automaticamente */
+}
+
+.alerta-coletas-page .map-container {
+  margin-top: 20px;
+  width: 100%; /* Preencher toda a largura */
+  max-width: 100%; /* Garantir que o mapa não ultrapasse a largura do container */
+  box-sizing: border-box; /* Incluir padding e borda na largura total */
+}
+
+.alerta-coletas-page .map-container iframe {
+  width: 100%; /* Preencher toda a largura */
+  height: 480px; /* Definir altura */
+  max-width: 100%; /* Garantir que o iframe não ultrapasse a largura do container */
+}
+
+.alerta-coletas-page .map-toggle-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%; /* Preencher toda a largura */
+}
+
+.alerta-coletas-page .map-toggle-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+  flex: 1; /* Distribuir espaço igualmente */
+}
+
+.alerta-coletas-page .map-toggle-button.active {
+  background-color: #A9B388;
+  color: white;
+}
+
+.alerta-coletas-page .remind-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #A9B388;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Preencher toda a largura */
+  text-align: center;
 }
