@@ -8,11 +8,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
-body {
+.cadastro-alerta-page {
   background-color: #A9B388;
 }
 
