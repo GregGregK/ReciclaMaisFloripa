@@ -1,5 +1,4 @@
 /* banner.css */
-
 .banner {
   display: flex;
   justify-content: center;
@@ -32,7 +31,7 @@
   background-color: #5F6F52;
   color: #FEFAE0;
   border: none;
-  padding: 10px 20px;
+  padding: 10px ;
   margin-left: 10px;
   cursor: pointer;
   border-radius: 25px;
@@ -41,4 +40,23 @@
 
 .search-button:hover {
   background-color: #4d5941;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .search-button {
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  .search-container {
+    padding: 5px;
+  }
 }

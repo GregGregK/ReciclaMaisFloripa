@@ -1,0 +1,70 @@
+/* src/assets/apoio.css */
+
+.support-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .support-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .support-logos {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .support-logos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .support-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .support-contact {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .support-contact h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .support-contact p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .email-link {
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+  
+  .email-link:hover {
+    background-color: #f0f0f0;
+  }
+  

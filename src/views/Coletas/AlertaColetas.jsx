@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import Navbar from '../landing-page/sections/navbar';
 import Footer from '../../components/footer';
 import '../../assets/body.css';
@@ -11,6 +12,7 @@ const AlertaColetas = () => {
   const initialBairro = searchParams.get('bairro') || '';
 
   const [bairro, setBairro] = useState(initialBairro);
+  const [autocomplete, setAutocomplete] = useState(null);
   const [coordenadas, setCoordenadas] = useState({ lat: 0, lng: 0 });
   const [nomeRota, setNomeRota] = useState('Nome: Não encontrado');
   const [descricaoRota, setDescricaoRota] = useState('Descrição: Não encontrada');
@@ -59,8 +61,22 @@ const AlertaColetas = () => {
     };
   }, []);
 
+  const onLoad = (autocomplete) => {
+    setAutocomplete(autocomplete);
+  };
+
+  const onPlaceChanged = () => {
+    if (autocomplete !== null) {
+      const place = autocomplete.getPlace();
+      if (place.formatted_address) {
+        setBairro(place.formatted_address);
+      }
+    } else {
+      console.log('Autocomplete is not loaded yet!');
+    }
+  };
+
   const handleSearch = () => {
-    // Atualiza o estado do bairro para o novo valor
     const newBairro = document.getElementById('bairro-input').value;
     setBairro(newBairro);
   };
@@ -75,12 +91,18 @@ const AlertaColetas = () => {
       <div className="alerta-coletas-content">
         <div className="info-container">
           <div className="search-container">
-            <input
-              type="text"
-              id="bairro-input"
-              className="search-input"
-              placeholder="Digite o endereço para encontrar Ecopontos..."
-            />
+            <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} libraries={['places']}>
+              <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+                <input
+                  type="text"
+                  id="bairro-input"
+                  className="search-input"
+                  placeholder="Digite o endereço para encontrar Ecopontos..."
+                  value={bairro}
+                  onChange={(e) => setBairro(e.target.value)}
+                />
+              </Autocomplete>
+            </LoadScript>
             <button className="search-button" onClick={handleSearch}>Pesquisar</button>
           </div>
           <span className="info-text">Exibindo resultados para: {bairro}</span>

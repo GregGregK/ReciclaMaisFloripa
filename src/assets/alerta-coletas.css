@@ -1,12 +1,14 @@
+/* src/assets/alerta-coletas.css */
+
 /* Escopo específico para a página de Alerta Coletas */
 .alerta-coletas-page .alerta-coletas-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Preencher toda a largura */
-  padding: 20px; /* Adicionar espaçamento interno */
-  box-sizing: border-box; /* Incluir padding e borda na largura total */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .alerta-coletas-page .info-container {
@@ -14,8 +16,8 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px; /* Definir largura máxima */
-  width: 100%; /* Preencher toda a largura */
+  max-width: 800px;
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -24,47 +26,55 @@
 
 .alerta-coletas-page .search-container {
   display: flex;
-  gap: 10px;
-  width: 100%; /* Preencher toda a largura */
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .alerta-coletas-page .search-input {
-  flex: 1;
+  width: 500px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%; /* Preencher toda a largura disponível */
-  box-sizing: border-box; /* Incluir padding e borda na largura total */
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
 }
 
 .alerta-coletas-page .search-button {
-  padding: 10px;
+  background-color: #5F6F52;
+  color: #FEFAE0;
   border: none;
-  border-radius: 5px;
-  background-color: #A9B388;
-  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
   cursor: pointer;
-  width: auto; /* Ajustar largura automaticamente */
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.alerta-coletas-page .search-button:hover {
+  background-color: #4d5941;
 }
 
 .alerta-coletas-page .map-container {
   margin-top: 20px;
-  width: 100%; /* Preencher toda a largura */
-  max-width: 100%; /* Garantir que o mapa não ultrapasse a largura do container */
-  box-sizing: border-box; /* Incluir padding e borda na largura total */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .alerta-coletas-page .map-container iframe {
-  width: 100%; /* Preencher toda a largura */
-  height: 480px; /* Definir altura */
-  max-width: 100%; /* Garantir que o iframe não ultrapasse a largura do container */
+  width: 100%;
+  height: 480px;
+  max-width: 100%;
 }
 
 .alerta-coletas-page .map-toggle-buttons {
   display: flex;
   gap: 10px;
   margin-top: 10px;
-  width: 100%; /* Preencher toda a largura */
+  width: 100%;
 }
 
 .alerta-coletas-page .map-toggle-button {
@@ -73,7 +83,7 @@
   border-radius: 5px;
   background-color: #ccc;
   cursor: pointer;
-  flex: 1; /* Distribuir espaço igualmente */
+  flex: 1;
 }
 
 .alerta-coletas-page .map-toggle-button.active {
@@ -88,6 +98,45 @@
   background-color: #A9B388;
   color: white;
   cursor: pointer;
-  width: 100%; /* Preencher toda a largura */
+  max-width: 100%;
+
   text-align: center;
+}
+
+/* src/assets/alerta-coletas.css */
+
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+  .alerta-coletas-page .info-container {
+    padding: 15px;
+  }
+
+  .alerta-coletas-page .search-container {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .alerta-coletas-page .search-input {
+    width: 100%;
+  }
+
+  .search-button {
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alerta-coletas-page .info-container {
+    padding: 10px;
+  }
+
+  .alerta-coletas-page .search-input {
+    padding: 8px;
+  }
+
+  .alerta-coletas-page .search-button {
+    padding: 8px;
+  }
 }

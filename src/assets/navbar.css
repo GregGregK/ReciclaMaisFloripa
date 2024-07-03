@@ -1,53 +1,101 @@
-/* Define a navbar para ocupar todo o topo da página */
 .nav {
   background-color: #5F6F52;
-  padding: 20px; /* Aumenta o padding para aumentar o tamanho da navbar */
+  padding: 20px;
   display: flex;
-  justify-content: space-between; /* Alinha itens nas extremidades esquerda e direita */
-  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
-  position: fixed; /* Fixa a navbar no topo da página */
+  box-sizing: border-box;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
-  height: 70px; /* Define a altura da navbar */
+  z-index: 1000;
+  height: 70px;
 }
 
-/* Remove margens e padding padrão */
 .ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center; /* Centraliza verticalmente os itens */
 }
 
-.li {
+.desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu .li {
   display: inline;
 }
 
-/* Estiliza os links */
-.a {
+.desktop-menu .a {
   color: #FEFAE0;
   padding: 8px 16px;
   transition: color 0.3s ease;
-  font-size: 15px; /* Aumenta o tamanho da fonte dos links */
-}
-
-.a:hover {
-  color: #D4D4D4; /* Cor ao passar o mouse */
-}
-
-/* Estiliza o ícone */
-.icon {
-  color: #FEFAE0;
-  margin-right: 16px;
   font-size: 15px;
 }
 
-/* Adiciona um espaço no topo do conteúdo para que ele não fique atrás da navbar */
+.desktop-menu .a:hover {
+  color: #D4D4D4;
+}
+
+.icon {
+  color: #FEFAE0;
+  margin-left: 16px;
+  font-size: 15px;
+}
+
 body {
-  padding-top: 70px; /* Ajuste conforme a altura da navbar */
+  padding-top: 70px;
+}
+
+.menu-button {
+  display: none;
+}
+
+.mobile-menu {
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  background-color: #5F6F52;
+  width: 100%;
+  box-sizing: border-box;
+  display: none;
+  z-index: 999;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+.mobile-menu .li {
+  display: block;
+  text-align: center;
+}
+
+.mobile-menu .a {
+  color: #FEFAE0;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.mobile-menu .a:hover {
+  background-color: #4A5C3E;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    background: none;
+    border: none;
+    color: #FEFAE0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
 }
