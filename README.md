@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Vamos criar o conteúdo do arquivo README.md
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+readme_content = """
+# Recicla Mais Floripa
 
-## Available Scripts
+**Versão 1.0**
 
-In the project directory, you can run:
+## Visão Geral
 
-### `npm start`
+O projeto "Recicla Mais Floripa" é uma aplicação web desenvolvida com o objetivo de facilitar o acesso à informação sobre pontos de coleta de lixo em Florianópolis e os horários de coleta, promovendo uma cidade mais limpa e sustentável.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Índice
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Visão Geral](#visão-geral)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
-### `npm test`
+## Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Pesquisar endereços e encontrar pontos de coleta de lixo próximos.
+- Visualizar horários de coleta para cada ponto.
+- Contribuir para um ambiente mais limpo e sustentável em Florianópolis.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- @iconscout/react-unicons
+- @react-google-maps/api
+- @testing-library/jest-dom
+- @testing-library/react
+- @testing-library/user-event
+- firebase
+- flowbite-react
+- react-router-dom
+- react-scripts
+- web-vitals
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para instalar e rodar o projeto localmente, siga os passos abaixo:
 
-### `npm run eject`
+1. Clone o repositório:
+   \`\`\`bash
+   git clone https://github.com/GregGregK/ReciclaMaisFloripa.git
+   \`\`\`
+2. Navegue até o diretório do projeto:
+   \`\`\`bash
+   cd ReciclaMaisFloripa
+   \`\`\`
+3. Instale as dependências:
+   \`\`\`bash
+   npm install
+   \`\`\`
+4. Inicie o projeto:
+   \`\`\`bash
+   npm start
+   \`\`\`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Depois de iniciar o projeto, abra seu navegador e navegue até \`http://localhost:3000\` para acessar a aplicação.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contribuição
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Se você deseja contribuir com o projeto, siga os passos abaixo:
 
-## Learn More
+1. Faça um fork do repositório.
+2. Crie uma nova branch para suas alterações:
+   \`\`\`bash
+   git checkout -b minha-nova-funcionalidade
+   \`\`\`
+3. Faça commit das suas alterações:
+   \`\`\`bash
+   git commit -m 'Adiciona nova funcionalidade'
+   \`\`\`
+4. Envie para a branch principal:
+   \`\`\`bash
+   git push origin minha-nova-funcionalidade
+   \`\`\`
+5. Abra um Pull Request.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Licença
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+"""
