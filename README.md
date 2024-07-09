@@ -1,6 +1,3 @@
-# Vamos criar o conteúdo do arquivo README.md
-
-readme_content = """
 # Recicla Mais Floripa
 
 **Versão 1.0**
