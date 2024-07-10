@@ -13,7 +13,7 @@ const SignIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             console.log(userCredential);
-            navigate('/'); // Redireciona para a página home
+            navigate('/home'); // Redireciona para a página home
         }).catch((error) => {
             console.log(error);
         });
